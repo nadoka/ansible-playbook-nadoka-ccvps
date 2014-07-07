@@ -1,0 +1,7 @@
+---
+- user: name={{ item }} comment="{{ item }}@github" shell=/bin/bash
+  with_items: github_users
+- file: path=/home/{{ item }}/.ssh state=directory owner={{ item }} group={{ item }} mode=0700
+  with_items: github_users
+- get_url: url=https://github.com/{{ item }}.keys dest=/home/{{ item }}/.ssh/authorized_keys owner={{ item }} group={{ item }} mode=0644
+  with_items: github_users
