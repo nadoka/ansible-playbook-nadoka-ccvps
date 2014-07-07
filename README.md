@@ -12,11 +12,10 @@ Playbook for nadoka-ccvps.n-z.jp
     % vagrant up
 ```
 
-### Ansible from Host OS
+### Ansible in Production
 
 ```
-    % git clone https://github.com/nadoka/ansible-playbook-nadoka-ccvps
-    % cd ansible-playbook-nadoka-ccvps
-    % ansible-galaxy install -f -p provision/roles -r provision/roles/Rolefile
-    % ANSIBLE_REMOTE=1 vagrant up
+    $ git clone https://github.com/nadoka/ansible-playbook-nadoka-ccvps
+    $ cd ansible-playbook-nadoka-ccvps
+    $ ./provision/provision.sh
 ```
