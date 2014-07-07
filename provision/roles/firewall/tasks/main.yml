@@ -1,2 +1,4 @@
 ---
+# ufw since 1.6
+#- include: ufw.yml tags=firewall_ufw
 - include: tcp_wrapper.yml tags=firewall_tcp_wrapper

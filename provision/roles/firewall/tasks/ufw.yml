@@ -1,0 +1,19 @@
+---
+# default policies
+# `ufw enable` and `ufw default deny`
+- ufw: state=enabled policy=deny
+# `ufw default reject outgoing`
+- ufw: direction=out policy=reject
+
+# minimum ports
+# `ufw allow out 53` (DNS)
+- ufw: rule=allow direction=out to_port=53
+# `ufw allow out 80/tcp` (http)
+- ufw: rule=allow direction=out to_port=80 proto=tcp
+# `ufw allow out 443/tcp` (https)
+- ufw: rule=allow direction=out to_port=443 proto=tcp
+# `ufw allow out 123/udp` (ntp)
+- ufw: rule=allow direction=out to_port=123 proto=udp
+
+# ufw limit 22/tcp
+- ufw: rule=limit to_port=22 proto=tcp
