@@ -1,0 +1,5 @@
+---
+# for Vagrant
+- lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers vagrant"'
+# for VPS
+- lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers adminuser"'
