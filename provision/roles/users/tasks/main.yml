@@ -1,3 +1,4 @@
 ---
 - include: github.yml tags=users_github
 - include: sudoers.yml tags=users_sudoers
+- include: sshd.yml tags=users_sshd

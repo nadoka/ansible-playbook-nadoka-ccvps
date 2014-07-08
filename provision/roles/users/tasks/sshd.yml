@@ -1,0 +1,3 @@
+---
+- lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers {{ item }}"'
+  with_items: github_users
