@@ -1,5 +1,7 @@
 ---
 # for Vagrant
 - lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers vagrant"'
+  notify: restart ssh
 # for VPS
 - lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers adminuser"'
+  notify: restart ssh
