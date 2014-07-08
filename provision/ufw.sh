@@ -15,3 +15,6 @@ $UFW allow out 123/udp
 
 # sshd
 $UFW limit 22/tcp
+
+# ngircd
+$UFW limit 6697/tcp
