@@ -13,8 +13,8 @@ EOF
 fi
 if [ -d /vagrant ]; then
     [ -d /etc/ansible/roles ] || ansible-galaxy install -r /vagrant/provision/roles/Rolefile
-    ansible-playbook /vagrant/provision/site.yml --connection=local
+    ansible-playbook /vagrant/provision/first.yml --connection=local
 else
     [ -d provision/roles/znzj.ja_jp ] || ansible-galaxy install -f -p provision/roles -r provision/roles/Rolefile
-    sudo ansible-playbook provision/site.yml --connection=local
+    sudo ansible-playbook provision/first.yml --connection=local
 fi
