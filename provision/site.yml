@@ -5,5 +5,6 @@
   - znzj.ja_jp
   - grub
   - firewall
+  - ufw
   - users
   - znzj.ngircd
