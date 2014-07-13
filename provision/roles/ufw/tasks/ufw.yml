@@ -1,9 +1,11 @@
 ---
 # default policies
-# `ufw enable` and `ufw default deny`
-- ufw: state=enabled policy=deny
+# `ufw enable`
+- ufw: state=enabled
+# `ufw default deny`
+- ufw: policy=deny
 # `ufw default reject outgoing`
-- ufw: direction=out policy=reject
+- ufw: direction=outgoing policy=reject
 
 # minimum ports
 # `ufw allow out 53` (DNS)
