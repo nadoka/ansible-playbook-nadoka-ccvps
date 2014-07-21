@@ -20,9 +20,6 @@
 # `ufw limit 22/tcp` (ssh)
 - ufw: rule=limit to_port=22 proto=tcp
 
-# ircs
-- ufw: rule=limit to_port=6697 proto=tcp
-
 # http,https
 - ufw: rule=reject to_port=80,443 proto=tcp
 
