@@ -17,5 +17,22 @@
 # `ufw allow out 123/udp` (ntp)
 - ufw: rule=allow direction=out to_port=123 proto=udp
 
-# ufw limit 22/tcp
+# `ufw limit 22/tcp` (ssh)
 - ufw: rule=limit to_port=22 proto=tcp
+
+# ircs
+- ufw: rule=limit to_port=6697 proto=tcp
+
+# http,https
+- ufw: rule=reject to_port=80,443 proto=tcp
+
+# ignore attacks
+- ufw: rule=deny to_port=23 proto=tcp # telnet
+- ufw: rule=deny to_port=1080 proto=tcp # proxy
+- ufw: rule=deny to_port=1433 proto=tcp # SQL Server
+- ufw: rule=deny to_port=3128 proto=tcp # proxy
+- ufw: rule=deny to_port=3306 proto=tcp # mysql
+- ufw: rule=deny to_port=3389 proto=tcp # RDP
+- ufw: rule=deny to_port=8000 proto=tcp # proxy
+- ufw: rule=deny to_port=5901 proto=tcp # X
+- ufw: rule=deny to_port=8080 proto=tcp # proxy
