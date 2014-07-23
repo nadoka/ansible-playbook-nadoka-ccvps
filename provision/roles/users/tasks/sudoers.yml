@@ -1,3 +1,0 @@
----
-- template: src=sudoers.j2 dest=/etc/sudoers.d/{{ item }} validate='visudo -cf %s' owner=root group=root mode=0440
-  with_items: github_users
