@@ -17,3 +17,14 @@ ngircd_ssl_ports: 6697
 # role only
 ngircd_ssl_csr_file: "/etc/ssl/{{ ngircd_hostname }}.csr"
 ngircd_ssl_csr_subj: "/CN={{ ngircd_hostname }}"
+
+# github-users
+github_users:
+- username: znz
+  sudoers: yes
+- username: ko1
+  sudoers: no
+- username: nurse
+  sudoers: no
+- username: unak
+  sudoers: no
