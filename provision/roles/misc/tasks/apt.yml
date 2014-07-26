@@ -1,0 +1,3 @@
+---
+- apt: name=ansible state=latest default_release=trusty-backports
+- apt: name=debian-goodies
