@@ -1,4 +1,7 @@
 ---
+- lineinfile: 'dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin without-password"'
+- lineinfile: 'dest=/etc/ssh/sshd_config regexp="^ChallengeResponseAuthentication" line="ChallengeResponseAuthentication no"'
+- lineinfile: 'dest=/etc/ssh/sshd_config regexp="^PasswordAuthentication" line="PasswordAuthentication no"'
 # for Vagrant
 - lineinfile: 'dest=/etc/ssh/sshd_config line="AllowUsers vagrant"'
   notify: restart ssh
