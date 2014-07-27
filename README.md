@@ -4,11 +4,16 @@ Playbook for nadoka-ccvps.n-z.jp
 
 ## Usage
 
-### Ansible in Guest OS
+### Ansible in Guest OS (first)
 
     % git clone https://github.com/nadoka/ansible-playbook-nadoka-ccvps
     % cd ansible-playbook-nadoka-ccvps
     % vagrant up
+
+### Ansible in Guest OS (all)
+
+    $ cd /vagrant
+	$ ansible-playbook -i provision/hosts provision/site.yml
 
 ### Ansible in Production
 
