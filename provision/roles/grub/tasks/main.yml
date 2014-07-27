@@ -1,9 +1,0 @@
----
-# do not stop after boot failed
-- lineinfile: 'dest=/etc/default/grub line=GRUB_RECORDFAIL_TIMEOUT=5'
-  notify: update-grub
-# reduce getty
-- lineinfile:
-    dest: /etc/default/grub
-    line: 'GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX 4"'
-  notify: update-grub
