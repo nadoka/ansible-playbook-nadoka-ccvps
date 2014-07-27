@@ -2,7 +2,8 @@
 - hosts: all
   sudo: yes
   roles:
-  - znzj.ja_jp
+  - { role: znzj.ja_jp, ja_jp_enable_backports: yes }
   - znzj.grub
   - firewall
-  - users
+  - znzj.github-users
+  - misc
