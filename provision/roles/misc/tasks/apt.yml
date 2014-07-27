@@ -1,3 +1,5 @@
 ---
 - apt: name=ansible state=latest default_release=trusty-backports
 - apt: name=debian-goodies
+- apt: name=nano state=absent
+- apt: name=vim
