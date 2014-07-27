@@ -8,7 +8,7 @@ ngircd_admin_email: "irc@irc.example.com"
 ngircd_info: "Yet another IRC Server running for nadoka-san"
 ngircd_password: "nadokapass"
 # [Limits]
-ngircd_max_nick_length: 18
+ngircd_max_nick_length: 30
 # [SSL]
 ngircd_ssl_cert_file: "/etc/ssl/certs/{{ ngircd_hostname }}.crt"
 ngircd_ssl_dh_file: "/etc/ngircd/dhparams.pem"
