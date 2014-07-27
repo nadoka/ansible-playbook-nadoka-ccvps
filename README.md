@@ -13,7 +13,7 @@ Playbook for nadoka-ccvps.n-z.jp
 ### Ansible in Guest OS (all)
 
     $ cd /vagrant
-	$ ansible-playbook -i provision/hosts provision/site.yml
+	$ ansible-playbook -i provision/hosts provision/site.yml -c local
 
 ### Ansible in Production
 
